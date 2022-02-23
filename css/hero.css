@@ -1,0 +1,67 @@
+#hero{
+    margin-top: var(--navbarHero);
+    background: rgb(255,255,255);
+background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f8f8f8",GradientType=1);
+
+    padding-bottom: var(--px64);
+
+    position: relative;
+}
+
+.heroSvg{
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.hero__title{
+    font-size: var(--px48);
+    font-family: var(--patua);
+    color: var(--accent-10);   
+}
+
+.hero__subtitle{
+    font-size: var(--px18);
+    color: var(--base);   
+}
+
+.hero__description{
+    font-size: var(--px16);
+    color: var(--accent-7); 
+
+    margin-bottom: var(--px16);
+}
+
+.bottomArrow{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: var(--px16);
+
+    font-size: var(--px24);
+    color: #6F6F6F80;
+
+    animation: updown 3s infinite;
+}
+
+@keyframes updown {
+    0%, 60%{
+        bottom: 16px;
+    }
+    70%{
+        bottom: 12px;
+    }
+    80%{
+        bottom: 16px;
+    }
+    90%{
+        bottom: 12px;
+    }
+    100%{
+        bottom: 16px;
+    }
+}
