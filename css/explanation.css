@@ -1,0 +1,54 @@
+#quotationExplanation{
+    margin-top: 15.625rem;
+    padding-bottom: 8rem;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+#quotationExplanation .genericButton{
+    margin-top: var(--px24);
+}
+
+.quotation__list__text{
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: var(--px8);
+
+    font-size: var(--px16);
+    color: var(--accent-8);
+    font-weight: var(--light);
+}
+
+.quotation__list__text:last-of-type{
+    margin-bottom: 0;
+}
+
+.quotation__list__text::marker {
+    color: var(--base);
+}
+ 
+.quotation__title{
+    font-family: var(--patua);
+    font-size: var(--px32);
+    color: var(--accent-10);
+
+    margin-bottom: var(--px16);
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    #quotationExplanation .svgImg{
+        position: absolute;
+        top: 5rem;
+        right: -20%;
+        height: 440px;
+        width: 600px;
+
+ 
+        z-index: -1;
+    }
+ 
+ }

@@ -33,7 +33,17 @@
     <!-- CSS Hero -->
     <link rel="stylesheet" href="css/hero.css">
 
+    <!-- CSS Como funciona -->
     <link rel="stylesheet" href="css/howWorks.css">
+
+    <!-- CSS Explicação -->
+    <link rel="stylesheet" href="css/explanation.css">
+
+    <!-- CSS Empresas -->
+    <link rel="stylesheet" href="css/companys.css">
+
+    <!-- CSS Rotas -->
+    <link rel="stylesheet" href="css/rotes.css">
 
     <!-- CSS Font-Awesome -->
     <script src="https://kit.fontawesome.com/c64cd9ff45.js" crossorigin="anonymous"></script>
@@ -53,8 +63,8 @@
                                 Curtti
                             </div>
                         </div>
-                        <div class="col-lg-auto d-lg-flex d-none">
-                            <ul class="navbar__list">
+                        <div class="d-lg-flex col-lg-auto navbar__list__container">
+                            <ul class="navbar__list container">
     
                                 <li class="navbar__list__item">
                                     <a href="#" class="navbar__list__item__link active">
@@ -80,8 +90,17 @@
                                     </a>
                                 </li>
     
+                                <li class="navbar__list__item d-md-none d-block">
+                                    <div class="navbar__quotationButton">
+                                        <a href="#" role="button" type="button" class="genericButton rounded">
+                                            Solicitar Cotação
+                                        </a>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>
+                            
+                        </div>   
+
                         <div class="col-auto d-none d-md-block">
                             <div class="navbar__quotationButton">
                                 <a href="#" role="button" type="button" class="genericButton rounded">
@@ -89,8 +108,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-auto d-lg-none d-sm-block">
-                            <button class="navbar__toggler">
+                        <div class="col-auto d-lg-none d-sm-flex">
+                            <button role="button" type="button" id="navbar__toggler">
                                 <i class="fa fa-bars navbar__button"></i>
                             </button>
                         </div>
@@ -103,7 +122,7 @@
     <section id="hero">
         <div class="container">
             <div class="row">
-                <div class="col-5">
+                <div class="col-lg-5 col-md-9 col-12 ">
                     <div class="row">
                         <div class="col-12">
                             <span class="hero__subtitle">
@@ -143,8 +162,8 @@
                     </div>
                 </div>
 
-                <div class="col-7">
-                    <img src="img/hero-svg.svg" class="heroSvg" alt="#">    
+                <div class="col-7 d-md-block d-none">
+                    <img src="img/hero-svg.svg" class="svgImg" alt="#">    
                 </div>
 
                 <div class="col-12">
@@ -158,8 +177,8 @@
 
     <section id="howWorks">
         <div class="container">
-            <div class="row">
-                <div class="col-4">
+            <div class="row justify-content-center justify-lg-content-between">
+                <div class="col-lg-4 col-md-8 col-12">
                     <div class="row">
                         <div class="col-12">
                             <div class="howWorks__image">
@@ -171,18 +190,18 @@
                         </div>
                         <div class="col-12">
                             <div class="howWorks__title">
-                                Origem e Destino
+                                <span>Origem e Destino</span>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="howWorks__content">
-                                Digite os campos de origem e destino da sua carga e clique em Solicitar Cotação
+                                <span>Digite os campos de origem e destino da sua carga e clique em Solicitar Cotação</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-lg-4 col-md-8 col-12">
                     <div class="row">
                         <div class="col-12">
                             <div class="howWorks__image">
@@ -194,18 +213,18 @@
                         </div>
                         <div class="col-12">
                             <div class="howWorks__title">
-                                Dados da Cotação
+                                <span>Dados da Cotação</span>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="howWorks__content">
-                                Insira os dados da sua carga e os dados pessoais para continuar
+                                <span>Insira os dados da sua carga e os dados pessoais para continuar</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-lg-4 col-md-8 col-12">
                     <div class="row">
                         <div class="col-12">
                             <div class="howWorks__image">
@@ -217,16 +236,124 @@
                         </div>
                         <div class="col-12">
                             <div class="howWorks__title">
-                               Enviado com Sucesso
+                               <span>Enviado com Sucesso</span>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="howWorks__content">
-                                Ao clicar em continuar, sua cotação já será enviada. Simples, não?!
+                                <span>Ao clicar em continuar, sua cotação já será enviada. Simples, não?!</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quotationExplanation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-9 col-12">
+                    <div class="row">
+                        <h2 class="quotation__title">
+                            Terminei de solicitar minha cotação, e agora?
+                        </h2>
+
+                        <ul class="quotation__list">
+                            <li class="quotation__list__text justify">
+                                <span>Centenas de transportadoras receberão sua cotação e poderá te responder pelo e-mail.</span>
+                            </li>
+                            <li class="quotation__list__text justify">
+                                <span>Ambos conversam e acordam um valor.</span>
+                            </li>
+                            <li class="quotation__list__text justify">
+                                <span>O material da carga é coletado e segue o seu destino.</span>
+                            </li>
+                            <li class="quotation__list__text justify">
+                                <span>Sua carga chega ao seu destino.</span>
+                            </li>
+                        </ul>
+
+                        <div class="col-12">
+                            <a href="#" role="button" type="button" class="genericButton rounded">
+                                Solicitar Cotação
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 d-md-block d-none">
+                    <div class="row">
+                        <img src="img/explanation-svg.svg" alt="" class="svgImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container-fluid company__before__div">
+            
+    </div>
+    <section id="companys">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-12">
+                        <h2 class="companys__title">
+                            Confiam no <span class="companys__title--blue">Curtti</span>
+                        </h2>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/guia-do-transporte-svg.svg" alt="Empresa"
+                         class="companys__logo">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/guia-do-transporte-svg.svg" alt="Empresa"
+                         class="companys__logo">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/guia-do-transporte-svg.svg" alt="Empresa"
+                         class="companys__logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rotes">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="img/rotes-svg.svg" alt="Pessoa segurando um celular olhando para as rotas" class="svgImg">
+                </div>
+
+                <div class="col-8 offset-1">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="rotes__title">
+                                Algumas de nossas rotas
+                            </h2>
+                        </div>
+                        <div class="col-12">
+                            <h3 class="rotes__text">Você pode escolher alguma de nossas rotas pré-definidas para solicitar uma cotação.</h3>
+                        </div>
+    
+                        <div class="col-6">
+                            <a href="#">
+                                <div class="rotes__link">
+                                    Rio de Janeiro, RJ - Rio de Janeiro, RJ
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

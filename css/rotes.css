@@ -1,0 +1,44 @@
+#rotes{
+    padding: var(--px80) 0;
+}
+
+.rotes__title{
+    font-size: var(--px32);
+    color: var(--accent-10);
+    font-weight: var(--medium);
+    font-family: var(--patua);
+
+    text-align: center;
+}
+
+.rotes__text{
+    font-size: var(--px18);
+    font-weight: var(--regular);
+    color: var(--accent-8);
+
+    text-align: center;
+}
+
+.rotes__link{
+    width: 100%;
+
+    padding: var(--px16) 0;
+    border: var(--accent-3) 1px solid;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--accent-1);
+
+    color: var(--accent-8);
+    font-size: clamp(0.75rem, 1.2vw, 1.125rem); 
+    font-weight: var(--regular);
+
+    transition: var(--t-generic);
+}
+
+.rotes__link:hover{
+    background-color: var(--base);
+    color: var(--accent-0);
+    
+}
