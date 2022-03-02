@@ -1,0 +1,287 @@
+#quotation{
+    margin-top: var(--px32);
+    margin-bottom: var(--px16);
+}
+
+.quotation__background{
+    background: var(--accent-0);
+
+    display: block;
+    margin: auto;
+    
+    padding-top: var(--px32);
+    padding-bottom: var(--px16);
+
+    z-index: 0;
+
+    position: relative;
+}
+
+.svgCircle{
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: var(--px8);
+
+    position: relative;
+}
+
+.data__visualizer__text{
+    text-align: center;
+    
+    color: var(--accent-9);
+    font-size: var(--px16);
+}
+
+.data__visualizer__text.--desactived{
+    color: var(--accent-3);
+}
+
+.svgDivider{
+    position: absolute;
+
+    z-index: -1;
+} 
+
+.svgDivider.--divider1{
+    top: 50%;
+    transform: translate(-85%, -50%);
+} 
+
+.svgDivider.--divider2{
+    top: 50%;
+    transform: translate(50%, -50%);
+}    
+
+.svgDivider svg{
+    width: 140%;
+}
+
+.data__visualizer{
+    margin-bottom: var(--px32);
+    margin-top: var(--px24);
+}
+
+.quotation__title{
+    color: var(--accent-9);
+
+    font-size: var(--px24);
+    font-family: var(--patua);
+
+    margin-bottom: var(--px8);
+}
+
+.form__fieldset.--volumes{
+    background: var(--accent-1);
+    padding: var(--px24) var(--px16) var(--px16) var(--px16);
+    
+    position: relative;
+
+    border-radius: 4px;
+
+    margin-top: var(--px8);
+}
+
+.form__fieldset .input__field{
+    margin-bottom: 0;
+}
+
+.volume__del{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    color: var(--accent-red);
+    font-size: var(--px12);
+    font-weight: var(--medium);
+
+    background: transparent;
+}
+
+.volume__number{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+
+    color: var(--base);
+    font-size: var(--px12);
+    font-weight: var(--medium);
+
+    background: transparent;
+}
+
+.volume__del:hover{
+    color: var(--accent-lightRed);
+}
+
+.input__width{
+    width: 9.375rem;
+}
+
+.quotation__addVolume .genericButton{
+    box-shadow: unset !important;
+
+    margin-top: var(--px8);
+
+    border: var(--accent-2) 1px solid;
+    
+    align-items: center;
+
+    color: var(--accent-9);
+    font-weight: var(--medium);
+}
+
+.quotation__addVolume .genericButton:hover{
+    color: var(--accent-6);
+}
+
+.icon__addVolume{
+    margin-right: var(--px8);
+}
+
+.quotation__nextButton .genericButton{
+    float: right;
+
+    margin-top: var(--px24);
+}
+
+.quotation__verifyData{
+    color: var(--accent-5);
+    font-weight: var(--light);
+    font-size: var(--px12);
+
+    text-align: center;
+
+    margin-top: var(--px16);
+}
+
+#pessoalDataTitle{
+    display: none;
+}
+
+#pessoalData{
+    display: none;
+}
+
+.quotation__back{
+    color: var(--accent-5);
+    background-color: transparent;
+
+    position: absolute;
+    top: var(--px16);
+    left: var(--px32);
+}
+
+.quotation__back span{
+    text-decoration: underline;
+}
+
+.cargoType{
+    position: absolute;
+
+    top: var(--px16);
+    right: var(--px32);
+
+    color: var(--accent-8);
+}
+
+.--mudanca{
+    color: var(--base);
+
+    font-weight: var(--medium);
+}
+
+/* sm */
+
+@media (max-width: 767.98px) {
+  
+    .input__width{
+        width: 30rem;
+    }  
+
+    .input__label{
+        margin-top: var(--px8);
+    }
+
+    .quotation__nextButton .genericButton{
+        display: flex;
+        width: 100%;
+
+        justify-content: center;
+
+        font-size: clamp(0.750rem, 3vw, 1.125rem);
+    }
+
+    .data__visualizer__text{
+        font-size: var(--px10);
+    }
+
+    .svgWidth{
+        width: var(--px16);
+        height: var(--px16);
+    }
+
+    .svgDivider svg{
+        width: 150%;
+    }
+
+    .svgDivider.--divider1{
+        top: 50%;
+        transform: translate(-65%, -50%);
+    } 
+    
+    .svgDivider.--divider2{
+        top: 50%;
+        transform: translate(20%, -50%);
+    } 
+}
+
+/* md */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .input__width{
+        width: 17.375rem;
+    }  
+
+    .input__label{
+        margin-top: var(--px8);
+    }
+    
+}
+
+/* others */
+
+@media (min-width: 769px) and (max-width: 1199px){
+    .svgDivider svg{
+        width: 140%;
+    }
+
+    .svgDivider.--divider1{
+        top: 50%;
+        transform: translate(-65%, -50%);
+    } 
+    
+    .svgDivider.--divider2{
+        top: 50%;
+        transform: translate(20%, -50%);
+    }  
+}
+
+@media (min-width: 1399px){
+    
+    .svgDivider svg{
+        width: 150%;
+    }
+
+    .svgDivider.--divider1{
+        top: 50%;
+        transform: translate(-95%, -50%);
+    } 
+    
+    .svgDivider.--divider2{
+        top: 50%;
+        transform: translate(50%, -50%);
+    }  
+
+}

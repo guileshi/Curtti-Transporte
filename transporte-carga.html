@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A melhor empresa de cotação do Brasil. Busque e encontre transportadoras credenciadas para a sua carga!">
+    <meta name="theme-color" content="#1565C0">
+    <meta name="robots" content="index, follow">
+    <meta name="Language" content="Portuguese">
+    <meta name="city" content="São Paulo">
+    <meta name="country" content="Brazil">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:size_name" content="Curtti Transporte">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta http-equiv="content-language" content="pr-br">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="Revisit-After" content="1 day">
+    <title>Curtti Transporte</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- CSS Cotação -->
+    <link rel="stylesheet" href="css/quotation.css">
+
+    <!-- CSS Font-Awesome -->
+    <script src="https://kit.fontawesome.com/c64cd9ff45.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="cotacao">
+
+    <section id="quotation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-11 quotation__background">
+
+                    <a href="cotacoes.html" role="button" type="button" class="quotation__back">
+                        <i class="fa-solid fa-angle-left"></i> 
+                        <span>
+                            Voltar
+                        </span>
+                    </a>
+
+                    <div class="cargoType">
+                        Tipo de Transporte: <span class="--mudanca">Transporte de Carga</span>
+                    </div>
+
+                    <div class="row d-flex justify-content-center data__visualizer">
+
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="svgCircle">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgWidth">
+                                            <circle cx="16" cy="16" r="16" fill="#2A438C"/>
+                                        </svg>
+
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="data__visualizer__text" id="visualizerCargoData">
+                                        Dados da Carga
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="svgCircle --center">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgWidth">
+                                            <circle cx="16" cy="16" r="16" fill="#DBDBDB" id="centerSVG"/>
+                                        </svg>
+
+                                        <div class="svgDivider --divider1">
+                                            <svg width="180" height="4" viewBox="0 0 180 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="180" height="4" fill="#EBEBEB" id="divider1"/>
+                                            </svg>
+                                        </div>
+
+                                        <div class="svgDivider --divider2">
+                                            <svg width="180" height="4" viewBox="0 0 180 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="180" height="4" fill="#EBEBEB"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="data__visualizer__text --desactived" id="visualizerPersonalData">
+                                        Dados Pessoais
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="svgCircle">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgWidth">
+                                            <circle cx="16" cy="16" r="16" fill="#DBDBDB"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="data__visualizer__text --desactived">
+                                        Finalização
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-10 d-block mx-auto">
+                            
+                        <div class="row">
+                            <form>
+                                <div class="quotation__title" id="cargoDataTitle">
+                                    Dados da Carga
+                                </div>
+                                <fieldset id="cargoData">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="input__field">
+                                                <label for="origin" class="input__label">Origem da sua Carga</label>
+                                            <input type="text" name="origin" id="origin" placeholder="Origem" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="input__field">
+                                                <label for="destination" class="input__label">Destino da sua Carga</label>
+                                            <input type="text" name="destination" id="destination" placeholder="Destino" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-12">
+                                            <div class="input__field" id="value">
+                                                <label for="value_cost" class="input__label">Valor da Nota(R$)</label>
+                                                <input type="text" name="value_cost" id="value_cost" placeholder="Nota Fiscal" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+    
+                                <div class="quotation__title --volumes" id="volumeTitle">
+                                    Volume
+                                </div>
+
+                                <fieldset class="form__fieldset --volumes" id="mainVolume">
+
+                                    <div class="row --inputVolume">
+                                        <div class="input__width">
+                                            <div class="input__field">
+                                                <label for="quantity" class="input__label">Quantidade</label>
+                                            <input type="number" name="quantity" id="quantity" placeholder="Quant." class="input__text placeholder" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                        <div class="input__width">
+                                            <div class="input__field">
+                                                <label for="weight" class="input__label">Peso</label>
+                                            <input type="number" name="weight" id="weight" placeholder="Peso(kg)" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                        <div class="input__width">
+                                            <div class="input__field">
+                                                <label for="height" class="input__label">Altura</label>
+                                            <input type="number" name="height" id="height" placeholder="Altura(m)" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                        <div class="input__width">
+                                            <div class="input__field">
+                                                <label for="width" class="input__label">Largura</label>
+                                            <input type="number" name="width" id="width" placeholder="Largura(m)" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                        <div class="input__width">
+                                            <div class="input__field">
+                                                <label for="length" class="input__label">Comprimento</label>
+                                            <input type="number" name="length" id="length" placeholder="Comp.(m)" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </fieldset>
+
+                                <div class="quotation__title" id="pessoalDataTitle">
+                                    Dados Pessoais
+                                </div>
+                                <fieldset id="pessoalData">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-md-4 col-12">
+                                            <div class="input__field">
+                                                <label for="name" class="input__label">Seu Nome</label>
+                                            <input type="text" name="name"placeholder="Digite seu nome" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 col-md-8 col-12">
+                                            <div class="input__field">
+                                                <label for="email" class="input__label">Seu Email</label>
+                                            <input type="text" name="email" placeholder="Digite seu email" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-4 col-12">
+                                            <div class="input__field">
+                                                <label for="phone" class="input__label">Telefone / Celular (Opcional)</label>
+                                            <input type="tel" name="phone" placeholder="Nota Fiscal" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>    
+
+                                <div class="quotation__error">
+                                    Você deve preencher todos os dados antes de ir para a proxima parte *
+                                </div>
+
+                                <div class="quotation__nextButton">
+                                    <button type="button" class="genericButton" onclick="nextStep()" id="quotationButton">
+                                        Continuar para Dados Pessoais
+                                    </button>
+                                </div>
+                                
+                            </form>
+
+                            <div class="quotation__verifyData">
+                                Não se esqueça de verificar se os dados estão corretos *
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </section>   
+
+    <!-- Importar Jquery -->
+    <script src="js/jquery-min.js"></script>
+
+    <!-- Importar Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Importar Mascara -->
+    <script src="js/mask.min.js"></script>
+
+    <script src="js/quotationMask.js"></script>
+
+    <!-- Importar JS Navbar -->
+    <script src="js/navbar.js"></script>
+
+    <!-- Importar JS Forms -->
+    <script src="js/forms.js"></script>
+
+</body>
+
+</html>

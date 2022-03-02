@@ -3,24 +3,31 @@
 }
 
 .rotes__title{
+    color: var(--accent-9);
     font-size: var(--px32);
-    color: var(--accent-10);
     font-weight: var(--medium);
     font-family: var(--patua);
 
     text-align: center;
 }
 
-.rotes__text{
+.rotes__subtitle{
     font-size: var(--px18);
     font-weight: var(--regular);
     color: var(--accent-8);
 
     text-align: center;
+
+    margin-bottom: var(--px32);
 }
 
 .rotes__link{
-    width: 100%;
+    position: relative;
+
+    margin-bottom: var(--px16);
+}
+
+.rotes__link__text{
 
     padding: var(--px16) 0;
     border: var(--accent-3) 1px solid;
@@ -34,11 +41,32 @@
     font-size: clamp(0.75rem, 1.2vw, 1.125rem); 
     font-weight: var(--regular);
 
-    transition: var(--t-generic);
+    transition: color 0.2s;
 }
 
-.rotes__link:hover{
-    background-color: var(--base);
+.rotes__link__text:hover{
+    background: linear-gradient(91.93deg, var(--base) 18.33%, var(--baseDark) 90.71%);
+
     color: var(--accent-0);
+}
+
+
+@media (max-width: 767.98px) {
+
+   .rotes__link__text{
+
+        font-size: clamp(0.75rem, 4vw, 1.125rem); 
+        
+   }
     
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .rotes__link__text{
+
+        font-size: clamp(0.75rem, 1.5vw, 1.125rem); 
+        
+   }
+
 }

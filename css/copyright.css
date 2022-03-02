@@ -1,0 +1,12 @@
+.copyright__background{
+    padding: var(--px16) 0;
+
+    background: var(--branco);
+}
+
+.copyright__content{
+    color: var(--accent-9);
+    font-size: var(--px18);
+
+    text-align: center;
+}

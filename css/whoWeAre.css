@@ -1,0 +1,27 @@
+.whoWeAre__background{
+    background: linear-gradient(180deg, var(--base) 0%, var(--baseDark) 100%);
+
+    padding: var(--px64) 0;
+}
+
+.whoWeAre__title{
+    font-family: var(--patua);
+    font-size: var(--px32);
+    text-align: center;
+    
+    color: var(--accent-0);
+
+    margin-bottom: var(--px16);
+}
+
+.whoWeAre__paragraph{
+    font-size: var(--px18);
+    font-weight: var(--light);
+    text-align: center;
+
+    color: var(--accent-0);
+
+    max-width: 750px;
+
+    margin-bottom: var(--px8);
+}

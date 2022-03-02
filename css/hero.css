@@ -18,7 +18,7 @@
 .hero__title{
     font-size: var(--px48);
     font-family: var(--patua);
-    color: var(--accent-10);   
+    color: var(--accent-9);   
     z-index: 1;
 }
 

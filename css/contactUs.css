@@ -1,0 +1,81 @@
+#contactUs{
+    padding: var(--px80) 0;
+}
+
+#contactUs .genericButton{
+    margin-top: var(--px24);
+}
+
+.contactUs__title{
+    font-size: var(--px32);
+    font-family: var(--patua);
+
+    margin-bottom: var(--px24);
+}
+
+.contactUs__background__contact{
+    background: linear-gradient(90deg, var(--base) 0%, var(--baseDark) 100%);
+
+    padding: var(--px24) var(--px24) var(--px64) var(--px24);
+
+    border-radius: var(--px24) 0 var(--px24) var(--px64);
+}
+
+.contactUs__contact__title{
+    font-size: var(--px18);
+    font-weight: var(--medium);
+
+    color: var(--accent-0);
+
+    margin-bottom: var(--px24);
+}
+
+.contactUs__item{
+    font-size: var(--px16);
+    font-weight: var(--light);
+
+    color: var(--accent-0);
+
+    margin-bottom: var(--px16);
+}
+
+.contactUs__item:hover, .contactUs__item:hover .contactUs__icon{
+    color: var(--accent-3);
+}
+
+.contactUs__icon{
+    margin-right: var(--px8);
+}
+
+.contactUs__contact__field{
+    margin-bottom: var(--px16);
+}
+
+@media (max-width: 767.98px) {
+
+    .contactUs__item, .contactUs__contact__title{
+        text-align: center;
+    }
+
+    /* .contactUs__contact__field{
+        display: flex;
+        justify-content: center;
+    } */
+
+    .contactUs__background__contact{
+        margin-top: var(--px32);
+
+        border-radius: var(--px24) 0 0 var(--px64);
+
+    }
+    
+    .no__padding__right{
+        padding-right: 0;
+    }
+}
+ 
+ @media (min-width: 768px) and (max-width: 991px) {
+ 
+    
+ 
+}
