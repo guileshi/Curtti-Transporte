@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="col-lg-10 col-11 quotation__background">
 
-                    <a href="cotacoes.html" role="button" type="button" class="quotation__back">
+                    <a href="cotacoes.html" role="button" type="button" class="quotation__back" onclick="backStep()">
                         <i class="fa-solid fa-angle-left"></i> 
                         <span>
                             Voltar
@@ -145,8 +145,7 @@
                                         <div>
                                             <div class="input__field">
                                                 <label for="observations" class="input__label">Observações</label>
-                                                <textarea type="text" name="observations" id="observations" placeholder="Digite aqui os detalhes da sua carga, quanto mais detalhes, melhor. Fique a vontade!" class="input__text col-12" required rows="5" onblur="inputBlur(this)" onfocus="inputFocus(this)">
-                                                </textarea>
+                                                <textarea type="text" name="observations" id="observations" placeholder="Digite aqui os detalhes da sua carga, quanto mais detalhes, melhor. Fique a vontade!" class="input__text col-12" required rows="5" onblur="inputBlur(this)" onfocus="inputFocus(this)"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -172,7 +171,7 @@
                                         <div class="col-lg-5 col-md-4 col-12">
                                             <div class="input__field">
                                                 <label for="phone" class="input__label">Telefone / Celular (Opcional)</label>
-                                            <input type="tel" name="phone" placeholder="Nota Fiscal" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            <input type="tel" name="phone" placeholder="Telefone/Celular" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                     </div>
@@ -204,16 +203,11 @@
     <!-- Importar Jquery -->
     <script src="js/jquery-min.js"></script>
 
-    <!-- Importar Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-
     <!-- Importar Mascara -->
     <script src="js/mask.min.js"></script>
 
+    <!-- Importar Mascara da Cotação -->
     <script src="js/quotationMask.js"></script>
-
-    <!-- Importar JS Navbar -->
-    <script src="js/navbar.js"></script>
 
     <!-- Importar JS Forms -->
     <script src="js/forms.js"></script>

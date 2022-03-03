@@ -1,0 +1,80 @@
+#success .quotation__background{
+    padding-top: var(--px64);
+    padding-bottom: var(--px80);
+}
+
+#success{
+    position: relative;
+    height: 100vh;
+}
+
+#success #quotation{
+    position: absolute;
+
+    margin: 0;
+
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#svgSuccess{
+    opacity: 0;
+
+    transform: scale(0) translateY(-10px);
+
+    animation: popUpAnim 1.2s forwards;
+}
+
+.success__title{
+    font-size: var(--px32);
+    font-family: var(--patua);
+    color: var(--accent-9);
+
+    margin-bottom: var(--px8);
+
+    opacity: 0;
+
+    animation: slideDown 1s forwards;
+}
+
+.success__text{
+    font-size: var(--px16);
+    color: var(--accent-7);
+
+    opacity: 0;
+
+    margin-bottom: var(--px8);
+
+    animation: slideDown 1s 1.5s forwards;
+}
+
+.success__text:last-of-type{
+    margin-bottom: var(--px24);
+
+    animation: slideDown 1s 2s forwards;
+}
+
+.success__link{
+    font-size: var(--px16);
+    color: var(--accent-5);
+
+    text-decoration: underline;
+
+    opacity: 0;
+
+    animation: slideDown 1s 5s forwards;
+}
+
+.success__link:hover{
+    color: var(--base);
+}
+
+#success .genericButton{
+    margin-bottom: var(--px16);
+
+    opacity: 0;
+
+    animation: slideDown 1s 2.8s forwards;
+}

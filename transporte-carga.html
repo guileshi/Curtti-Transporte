@@ -43,13 +43,13 @@
             <div class="row">
                 <div class="col-lg-10 col-11 quotation__background">
 
-                    <a href="cotacoes.html" role="button" type="button" class="quotation__back">
+                    <a href="cotacoes.html" role="button" type="button" class="quotation__back" onclick="backStep()">
                         <i class="fa-solid fa-angle-left"></i> 
                         <span>
                             Voltar
                         </span>
                     </a>
-
+                    
                     <div class="cargoType">
                         Tipo de Transporte: <span class="--mudanca">Transporte de Carga</span>
                     </div>
@@ -165,26 +165,26 @@
                                         </div>
                                         <div class="input__width">
                                             <div class="input__field">
-                                                <label for="weight" class="input__label">Peso</label>
-                                            <input type="number" name="weight" id="weight" placeholder="Peso(kg)" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <label for="weight" class="input__label">Peso(kg)</label>
+                                            <input type="number" name="weight" id="weight" placeholder="Peso" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                         <div class="input__width">
                                             <div class="input__field">
-                                                <label for="height" class="input__label">Altura</label>
-                                            <input type="number" name="height" id="height" placeholder="Altura(m)" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <label for="height" class="input__label">Altura(m)</label>
+                                            <input type="number" name="height" id="height" placeholder="Altura" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                         <div class="input__width">
                                             <div class="input__field">
-                                                <label for="width" class="input__label">Largura</label>
-                                            <input type="number" name="width" id="width" placeholder="Largura(m)" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <label for="width" class="input__label">Largura(m)</label>
+                                            <input type="number" name="width" id="width" placeholder="Largura" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                         <div class="input__width">
                                             <div class="input__field">
-                                                <label for="length" class="input__label">Comprimento</label>
-                                            <input type="number" name="length" id="length" placeholder="Comp.(m)" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <label for="length" class="input__label">Comprimento(m)</label>
+                                            <input type="number" name="length" id="length" placeholder="Comp." class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                     </div>
@@ -211,7 +211,7 @@
                                         <div class="col-lg-5 col-md-4 col-12">
                                             <div class="input__field">
                                                 <label for="phone" class="input__label">Telefone / Celular (Opcional)</label>
-                                            <input type="tel" name="phone" placeholder="Nota Fiscal" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                            <input type="tel" name="phone" id="phone" placeholder="Telefone / Celular" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                     </div>
@@ -243,16 +243,11 @@
     <!-- Importar Jquery -->
     <script src="js/jquery-min.js"></script>
 
-    <!-- Importar Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Importar Vanilla Masker -->
+    <script src="js/vanilla-masker.min.js"></script>
 
-    <!-- Importar Mascara -->
-    <script src="js/mask.min.js"></script>
-
-    <script src="js/quotationMask.js"></script>
-
-    <!-- Importar JS Navbar -->
-    <script src="js/navbar.js"></script>
+    <!-- Meu Vanilla Masker -->
+    <script src="js/form-mask.js"></script>
 
     <!-- Importar JS Forms -->
     <script src="js/forms.js"></script>

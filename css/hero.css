@@ -20,12 +20,21 @@
     font-family: var(--patua);
     color: var(--accent-9);   
     z-index: 1;
+
+    opacity: 0;
+
+    animation: slideDown 1s 1.4s forwards;
+
 }
 
 .hero__subtitle{
     font-size: var(--px18);
     color: var(--base);  
     z-index: 1;
+
+    opacity: 0;
+
+    animation: slideDown 1s 0.2s forwards;
 }
 
 .hero__description{
@@ -33,6 +42,31 @@
     color: var(--accent-7); 
 
     margin-bottom: var(--px16);
+
+    opacity: 0;
+
+    animation: slideDown 1s 2.2s forwards;
+}
+
+#hero .input__field{
+
+    opacity: 0;
+
+    animation: slideDown 1s 2.8s forwards;
+}
+
+#hero .genericButton{
+
+    opacity: 0;
+
+    animation: opacity 1s 3.4s forwards;
+
+}
+
+#hero .svgImg{
+    opacity: 0;
+
+    animation: slideDown 1.5s 1.4s forwards;
 }
 
 .bottomArrow{
@@ -44,7 +78,9 @@
     font-size: var(--px24);
     color: #6F6F6F80;
 
-    animation: updown 3s infinite;
+    opacity: 0;
+
+    animation: slideDown 1s 3s forwards, updown 3s infinite;
 }
 
 @keyframes updown {

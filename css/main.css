@@ -54,8 +54,7 @@
     --t-generic: all 0.2s;
 
     /* hero + navbar */
-    --navbarHero: calc(4.25rem + 5rem);
-    --navbarHeight: 4.25rem;
+    --navbarHero: 5rem;
 }
 
 /* general */
@@ -133,6 +132,14 @@ body.cotacao{
 
 .rounded{
     border-radius: 3.125rem !important;
+}
+
+.fixed{
+    position: fixed;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    animation: slideDown 0.2s forwards;
 }
 
 .background__white{
@@ -285,10 +292,119 @@ body.cotacao{
 .quotation__error{
     font-size: var(--px12);
     color: var(--accent-red);
+    font-weight: var(--medium);
 
     visibility: hidden;
 
     pointer-events: none;
+}
+
+/* animações */
+
+@keyframes popUpAnim {
+    0%{
+        transform: scale(0);
+    }
+    70%{
+        transform: scale(1.02);
+    }
+    100%{
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes popUpAnim {
+    0%{
+        transform: scale(0);
+    }
+    70%{
+        transform: scale(1.02);
+    }
+    100%{
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+@-o-keyframes popUpAnim {
+    0%{
+        transform: scale(0);
+    }
+    70%{
+        transform: scale(1.02);
+    }
+    100%{
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes popUpAnim {
+    0%{
+        transform: scale(0);
+    }
+    70%{
+        transform: scale(1.02);
+    }
+    100%{
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+@keyframes slideDown{
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slideDown{
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@-moz-keyframes slideDown{
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@-o-keyframes slideDown{
+    0%{
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@keyframes opacity {
+    100%{
+        opacity: 1;
+    }
 }
 
 /* sm */

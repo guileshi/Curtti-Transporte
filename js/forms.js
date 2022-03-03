@@ -26,8 +26,16 @@ function nextStep(){
         $('#cargoDataTitle').addClass('hide')
         $('#cargoData').addClass('hide')
 
+        $('#mainVolume').removeClass('unhide')
+        $('#volumeTitle').removeClass('unhide')
+        $('#cargoDataTitle').removeClass('unhide')
+        $('#cargoData').removeClass('unhide')
+
         $('#pessoalDataTitle').addClass("unhide")
         $('#pessoalData').addClass('unhide')
+
+        $('#pessoalDataTitle').removeClass("hide")
+        $('#pessoalData').removeClass('hide')
 
         $('#quotationButton').attr('type', 'submit')
 
@@ -38,6 +46,10 @@ function nextStep(){
 
         $('#centerSVG').addClass('svgFill')
 
+        $('.quotation__back').on('click', function(event){
+            event.preventDefault()
+        })
+
         return
     } else{
         $('.quotation__error').css({"visibility": "visible"})
@@ -45,4 +57,35 @@ function nextStep(){
         return
     }
 
+}
+
+function backStep(){
+
+    $('#quotationButton').html("Continuar para Dados Pessoais")
+
+    $('#mainVolume').addClass('unhide')
+    $('#volumeTitle').addClass('unhide')
+    $('#cargoDataTitle').addClass('unhide')
+    $('#cargoData').addClass('unhide')
+
+    $('#pessoalDataTitle').addClass("hide")
+    $('#pessoalData').addClass('hide')
+
+    $('#pessoalData').removeClass('unhide')
+    $('#pessoalDataTitle').removeClass("unhide")
+
+    $('#quotationButton').attr('type', 'button')
+
+    $('#divider1').removeClass("svgFill")
+    $('#visualizerPersonalData').addClass('--desactived')
+
+    $('#visualizerCargoData').removeClass('--desactived')
+
+    $('#centerSVG').removeClass('svgFill')
+
+    $(this).attr("href", "cotacoes.html");
+
+    $('.quotation__back').on('click', function(event){
+        return event;
+    })
 }
