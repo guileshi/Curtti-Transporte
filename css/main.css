@@ -136,10 +136,6 @@ body.cotacao{
 
 .fixed{
     position: fixed;
-
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-
-    animation: slideDown 0.2s forwards;
 }
 
 .background__white{
@@ -217,7 +213,7 @@ body.cotacao{
 }
 
 .unhide{
-    display: initial !important;
+    display: block !important;
 }
 
 .floatRight{
@@ -300,6 +296,14 @@ body.cotacao{
 }
 
 /* animações */
+
+/* classes de animação */
+.slideDownAnim{
+    animation: slideDown 1s 0.2s forwards;
+}
+
+
+/* keyframes */
 
 @keyframes popUpAnim {
     0%{
@@ -403,6 +407,52 @@ body.cotacao{
 
 @keyframes opacity {
     100%{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes opacity {
+    100%{
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes opacity {
+    100%{
+        opacity: 1;
+    }
+}
+
+@-o-keyframes opacity {
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes listDown {
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes listDown {
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes listDown {
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes listDown {
+    100%{
+        transform: translateY(0);
         opacity: 1;
     }
 }

@@ -199,8 +199,7 @@
 
 /* sm */
 
-@media (max-width: 767.98px) {
-  
+@media (max-width: 280px){
     .input__width{
         width: 30rem;
     }  
@@ -233,18 +232,123 @@
 
     .svgDivider.--divider1{
         top: 50%;
-        transform: translate(-65%, -50%);
+        transform: translate(-100%, -50%);
     } 
     
     .svgDivider.--divider2{
         top: 50%;
-        transform: translate(20%, -50%);
+        transform: translate(50%, -50%);
+    } 
+
+    .cargoType{
+        font-size: var(--px10);
+    }
+    
+}
+
+@media (min-width: 281px) and (max-width: 574.98px){
+
+    .input__width{
+        width: 30rem;
+    }  
+
+    .input__label{
+        margin-top: var(--px8);
+    }
+
+    .quotation__nextButton .genericButton{
+        display: flex;
+        width: 100%;
+
+        justify-content: center;
+
+        font-size: clamp(0.750rem, 3vw, 1.125rem);
+    }
+
+    .data__visualizer__text{
+        font-size: var(--px10);
+    }
+
+    .svgWidth{
+        width: var(--px16);
+        height: var(--px16);
+    }
+
+    .svgDivider svg{
+        width: 130%;
+    }
+
+    .svgDivider.--divider1{
+        top: 50%;
+        transform: translate(-80%, -50%);
+    } 
+    
+    .svgDivider.--divider2{
+        top: 50%;
+        transform: translate(50%, -50%);
+    } 
+
+    .cargoType{
+        font-size: clamp(0.750rem, 3vw, 1.125rem);
+    }
+
+}
+
+@media (min-width: 575px) and (max-width: 767.98px) {
+  
+    .input__width{
+        width: 30rem;
+    }  
+
+    .input__label{
+        margin-top: var(--px8);
+    }
+
+    .quotation__nextButton .genericButton{
+        display: flex;
+        width: 100%;
+
+        justify-content: center;
+
+        font-size: clamp(0.750rem, 3vw, 1.125rem);
+    }
+
+    .data__visualizer__text{
+        font-size: var(--px10);
+    }
+
+    .svgWidth{
+        width: var(--px16);
+        height: var(--px16);
+    }
+
+    .svgDivider svg{
+        width: 125%;
+    }
+
+    .svgDivider.--divider1{
+        top: 50%;
+        transform: translate(-80%, -50%);
+    } 
+    
+    .svgDivider.--divider2{
+        top: 50%;
+        transform: translate(50%, -50%);
     } 
 }
 
 /* md */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
+
+    .svgDivider svg{
+        width: 120%;
+    }
+
+    .svgDivider.--divider1{
+        top: 50%;
+        transform: translate(-65%, -50%);
+    } 
 
     .input__width{
         width: 17.375rem;
@@ -258,9 +362,9 @@
 
 /* others */
 
-@media (min-width: 769px) and (max-width: 1199px){
+@media (min-width: 1024px) and (max-width: 1199px){
     .svgDivider svg{
-        width: 140%;
+        width: 120%;
     }
 
     .svgDivider.--divider1{
@@ -270,7 +374,7 @@
     
     .svgDivider.--divider2{
         top: 50%;
-        transform: translate(20%, -50%);
+        transform: translate(50%, -50%);
     }  
 }
 

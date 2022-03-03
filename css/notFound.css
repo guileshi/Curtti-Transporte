@@ -1,0 +1,29 @@
+#notFound{
+    padding-top: var(--px32);
+    padding-bottom: var(--px16);
+}
+
+.notFound__title{
+    font-family: var(--patua);
+    font-size: var(--px24);
+
+    text-align: center;
+
+    margin-top: var(--px16);
+}
+
+.notFound__text{
+    font-size: var(--px18);
+    text-align: center;
+
+    margin-top: var(--px8);
+}
+
+.notFound__link{
+    text-decoration: underline;
+    color: var(--base);
+}
+
+.notFound__link:hover{
+    color: var(--baseLight);
+}

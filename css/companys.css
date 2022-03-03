@@ -5,6 +5,10 @@
     position: relative;
 }
 
+#companyContent{
+    opacity: 0;
+}
+
 .company__before__div{
     height: 6.25rem;
     width: 100%;

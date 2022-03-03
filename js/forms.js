@@ -61,31 +61,40 @@ function nextStep(){
 
 function backStep(){
 
-    $('#quotationButton').html("Continuar para Dados Pessoais")
+    if($('#cargoData').hasClass('hide')){
 
-    $('#mainVolume').addClass('unhide')
-    $('#volumeTitle').addClass('unhide')
-    $('#cargoDataTitle').addClass('unhide')
-    $('#cargoData').addClass('unhide')
+        $('#quotationButton').html("Continuar para Dados Pessoais")
 
-    $('#pessoalDataTitle').addClass("hide")
-    $('#pessoalData').addClass('hide')
+        $('#mainVolume').addClass('unhide')
+        $('#volumeTitle').addClass('unhide')
+        $('#mainVolume').removeClass('hide')
+        $('#volumeTitle').removeClass('hide')
 
-    $('#pessoalData').removeClass('unhide')
-    $('#pessoalDataTitle').removeClass("unhide")
 
-    $('#quotationButton').attr('type', 'button')
+        $('#cargoDataTitle').addClass('unhide')
+        $('#cargoData').addClass('unhide')
+        $('#cargoDataTitle').removeClass('hide')
+        $('#cargoData').removeClass('hide')
+        
+        $('#pessoalDataTitle').addClass("hide")
+        $('#pessoalData').addClass('hide')
+        $('#pessoalDataTitle').removeClass("unhide")
+        $('#pessoalData').removeClass('unhide')
+    
+        $('#quotationButton').attr('type', 'button')
+    
+        $('#divider1').removeClass("svgFill")
+        $('#visualizerPersonalData').addClass('--desactived')
+    
+        $('#visualizerCargoData').removeClass('--desactived')
+    
+        $('#centerSVG').removeClass('svgFill')
+    
+        $(this).attr("href", "cotacoes.html");
 
-    $('#divider1').removeClass("svgFill")
-    $('#visualizerPersonalData').addClass('--desactived')
-
-    $('#visualizerCargoData').removeClass('--desactived')
-
-    $('#centerSVG').removeClass('svgFill')
-
-    $(this).attr("href", "cotacoes.html");
-
-    $('.quotation__back').on('click', function(event){
-        return event;
-    })
+        console.log("IF")
+    } else{
+        $('.quotation__back').unbind();
+        console.log("ELSE")
+    }
 }

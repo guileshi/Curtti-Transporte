@@ -7,6 +7,16 @@
     
 }
 
+#navbarID.fixed{
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    animation: slideDown 0.2s forwards;
+}
+
+.navbar__top{
+    position: relative;
+}
+
 .navbar__background{
     background: var(--accent-0);
 }
@@ -75,21 +85,39 @@
 }
 
 .navbar__show{
-    visibility: visible !important;
+    display: flex !important;
 }
 
 @media (max-width: 767.98px) {
 
-    .navbar__list__container{
-        display: block;
-        visibility: hidden;
-        
+    #navbarID.fixed .navbar__list__container{
+        display: none;
+
         position: fixed;
-        top: var(--navbarHeight);
+        top: 4.25rem;
         right: 0;
         left: 0;
 
         background: var(--accent-0);
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #navbarID .navbar__list__container{
+        display: none;
+
+        position: absolute;
+        top: 4.25rem;
+        right: 0;
+        left: 0;
+
+        z-index: 10;
+
+        opacity: 0;
+        transform: translateY(-10%);
+
+        background: var(--accent-0);
+
+        animation: listDown 0.3s forwards;
     }
 
     .navbar__list{
@@ -117,21 +145,42 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
-    .navbar__list__container{
-        display: block;
-        visibility: hidden;
+    #navbarID.fixed .navbar__list__container{
+        display: none;
 
         position: fixed;
-        top: var(--navbarHeight);
+        top: 4.25rem;
         right: 0;
         left: 0;
 
         background: var(--accent-0);
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #navbarID .navbar__list__container{
+        display: none;
+
+        position: absolute;
+        top: 4.25rem;
+        right: 0;
+        left: 0;
+
+        z-index: 10;
+
+        opacity: 0;
+        transform: translateY(-10%);
+
+        background: var(--accent-0);
+
+        animation: listDown 0.3s forwards;
     }
 
     .navbar__list{
         padding-top: var(--px16);
         padding-bottom: var(--px16);
+
+        padding-left: var(--px12);
+        padding-right: var(--px12);
 
         background-color: var(--accent-0);
 

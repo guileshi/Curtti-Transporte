@@ -1,5 +1,7 @@
 #howWorks{
     margin-top: var(--px80);
+
+    opacity: 0;
 }
 
 .howWorks__image{
