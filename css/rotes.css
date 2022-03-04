@@ -44,6 +44,9 @@
     font-weight: var(--regular);
 
     transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    -o-transition: color 0.2s;
 }
 
 .rotes__link__text:hover{

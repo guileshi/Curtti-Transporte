@@ -156,6 +156,10 @@ body.cotacao{
     box-shadow: 1px 1px 0 var(--accent-9);
 
     transition: 0.2s transform, 0.2s color, 0.2s box-shadow;
+    -webkit-transition: 0.2s transform, 0.2s color, 0.2s box-shadow;
+    -moz-transition: 0.2s transform, 0.2s color, 0.2s box-shadow;
+    -o-transition: 0.2s transform, 0.2s color, 0.2s box-shadow;
+
 }
 
 .genericButton.noAnimHover:hover{
