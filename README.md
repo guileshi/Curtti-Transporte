@@ -1,8 +1,6 @@
 # Curtti Transporte
 
 <b> Site feito para a Transportadora Curtti Transporte </b>
-
-<a href="">
  
   ✔️ HTML5 <br>
   ✔️ CSS3 <br>
