@@ -52,34 +52,6 @@ if(quotationExplanation){
     observerQuotationExplanation.observe(quotationExplanation)
 }
 
-// Empresas
-
-
-var companys = document.querySelector("#companys")
-
-var companysOptions = {
-    root: null,
-
-    threshold: 0.2,
-
-    rootMargin: "0px"
-}
-
-
-var observerCompanys = new IntersectionObserver(function (entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && entry.target === companys) {
-            
-            $('#companyContent').addClass('slideDownAnim')
-
-        } 
-    })
-}, companysOptions);
-
-if(companys){
-    observerCompanys.observe(companys)
-}
-
 // Rotas
 
 var rotes = document.querySelector("#rotes")
