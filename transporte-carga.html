@@ -33,6 +33,9 @@
     <!-- CSS Font-Awesome -->
     <script src="https://kit.fontawesome.com/c64cd9ff45.js" crossorigin="anonymous"></script>
 
+    <!-- CSS autocomplete -->
+    <link rel="stylesheet" href="css/autocomplete.css">
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -168,7 +171,7 @@
                                             <textarea type="text" name="comments" id="comments"
                                                 placeholder="Digite aqui os detalhes da sua carga, quanto mais detalhes, melhor. Fique a vontade!"
                                                 class="input__text col-12" required rows="5" onblur="inputBlur(this)"
-                                                onfocus="inputFocus(this)"></textarea>
+                                                onfocus="inputFocus(this)" required></textarea>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -243,6 +246,17 @@
 
     <!-- Importar JS Forms -->
     <script src="js/forms.js"></script>
+
+    <!-- Importar autocomplete -->
+    <script src="js/autocomplete.min.js"></script>
+
+    <!-- Importar city -->
+    <script src="js/city.js"></script>
+
+    <script>
+        $('#origin').val(localStorage.getItem('origin'));
+        $('#destination').val(localStorage.getItem('destination'));
+    </script>
 
 </body>
 
