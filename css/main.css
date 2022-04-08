@@ -299,12 +299,21 @@ body.cotacao{
     pointer-events: none;
 }
 
+/* copyright */
+
+.copyright__content{
+    padding: 16px;
+
+    color: var(--accent-9);
+}
+
 /* animações */
 
 /* classes de animação */
 .slideDownAnim{
     animation: slideDown 1s 0.2s forwards;
 }
+
 
 
 /* keyframes */
@@ -459,29 +468,4 @@ body.cotacao{
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-/* sm */
-
-@media (max-width: 767.98px) {
-
-    
-}
-
-/* md */
-
-@media (min-width: 768px) and (max-width: 1023px) {
-
-    
-}
-
-/* lg */
-
-@media (min-width: 1024px) and (max-width:1239.88px) {
-    
-}
-
-@media (min-width: 1240px) {
-
-   
 }
