@@ -1,7 +1,5 @@
 #contactUs{
     padding: var(--px80) 0;
-
-    opacity: 0;
 }
 
 #contactUs .genericButton{
