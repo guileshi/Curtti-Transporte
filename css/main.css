@@ -248,6 +248,12 @@ body.cotacao{
     padding: 16px 0;
 }
 
+.logo img{
+    width: auto;
+    height: 70px;
+    object-fit: contain;
+}
+
 .logo.--white{
     color: var(--accent-0);
 }
