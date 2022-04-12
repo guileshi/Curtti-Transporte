@@ -4,10 +4,6 @@
     padding: var(--px64) 0;
 }
 
-#whoWeAreContent{
-    opacity: 0;
-}
-
 .whoWeAre__title{
     font-family: var(--patua);
     font-size: var(--px32);
