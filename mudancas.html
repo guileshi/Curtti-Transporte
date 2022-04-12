@@ -23,7 +23,7 @@
     <title>Curtti Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+
     <!-- CSS Main -->
     <link rel="stylesheet" href="css/main.css">
 
@@ -32,6 +32,9 @@
 
     <!-- CSS Font-Awesome -->
     <script src="https://kit.fontawesome.com/c64cd9ff45.js" crossorigin="anonymous"></script>
+
+    <!-- CSS autocomplete -->
+    <link rel="stylesheet" href="css/autocomplete.css">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -44,14 +47,15 @@
                 <div class="col-lg-10 col-11 quotation__background">
 
                     <a href="cotacoes.html" role="button" type="button" class="quotation__back" onclick="backStep()">
-                        <i class="fa-solid fa-angle-left"></i> 
+                        <i class="fa-solid fa-angle-left"></i>
                         <span>
                             Voltar
                         </span>
                     </a>
 
                     <div class="cargoType">
-                        <span class="d-md-inline d-none">Tipo de Transporte: </span><span class="--mudanca">Mudança</span>
+                        <span class="d-md-inline d-none">Tipo de Transporte: </span><span
+                            class="--mudanca">Mudança</span>
                     </div>
 
                     <div class="row d-flex justify-content-center data__visualizer">
@@ -60,11 +64,12 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="svgCircle">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgWidth">
-                                            <circle cx="16" cy="16" r="16" fill="#2A438C"/>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="svgWidth">
+                                            <circle cx="16" cy="16" r="16" fill="#2A438C" />
                                         </svg>
 
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -78,19 +83,22 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="svgCircle --center">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgWidth">
-                                            <circle cx="16" cy="16" r="16" fill="#DBDBDB" id="centerSVG"/>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="svgWidth">
+                                            <circle cx="16" cy="16" r="16" fill="#DBDBDB" id="centerSVG" />
                                         </svg>
 
                                         <div class="svgDivider --divider1">
-                                            <svg width="180" height="4" viewBox="0 0 180 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="180" height="4" fill="#EBEBEB" id="divider1"/>
+                                            <svg width="180" height="4" viewBox="0 0 180 2" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="180" height="4" fill="#EBEBEB" id="divider1" />
                                             </svg>
                                         </div>
 
                                         <div class="svgDivider --divider2">
-                                            <svg width="180" height="4" viewBox="0 0 180 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="180" height="4" fill="#EBEBEB"/>
+                                            <svg width="180" height="4" viewBox="0 0 180 2" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="180" height="4" fill="#EBEBEB" />
                                             </svg>
                                         </div>
                                     </div>
@@ -106,8 +114,9 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="svgCircle">
-                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgWidth">
-                                            <circle cx="16" cy="16" r="16" fill="#DBDBDB"/>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" class="svgWidth">
+                                            <circle cx="16" cy="16" r="16" fill="#DBDBDB" />
                                         </svg>
                                     </div>
                                 </div>
@@ -121,9 +130,10 @@
                     </div>
 
                     <div class="col-10 d-block mx-auto">
-                            
+
                         <div class="row">
-                            <form>
+                            <form method="post" action="sendMail.php">
+                                <input type="hidden" name="type" id="type" value="mudanca">
                                 <div class="quotation__title" id="cargoDataTitle">
                                     Dados da Carga
                                 </div>
@@ -132,20 +142,29 @@
                                         <div class="col-lg-4 col-md-6 col-12">
                                             <div class="input__field">
                                                 <label for="origin" class="input__label">Origem da sua Carga</label>
-                                            <input type="text" name="origin" id="origin" placeholder="Origem" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <input type="text" name="origin" id="origin" placeholder="Origem"
+                                                    class="input__text" required onblur="inputBlur(this)"
+                                                    onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-6 col-12">
                                             <div class="input__field">
-                                                <label for="destination" class="input__label">Destino da sua Carga</label>
-                                            <input type="text" name="destination" id="destination" placeholder="Destino" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <label for="destination" class="input__label">Destino da sua
+                                                    Carga</label>
+                                                <input type="text" name="destination" id="destination"
+                                                    placeholder="Destino" class="input__text" required
+                                                    onblur="inputBlur(this)" onfocus="inputFocus(this)">
                                             </div>
                                         </div>
 
                                         <div>
                                             <div class="input__field">
-                                                <label for="observations" class="input__label">Observações</label>
-                                                <textarea type="text" name="observations" id="observations" placeholder="Digite aqui os detalhes da sua carga, quanto mais detalhes, melhor. Fique a vontade!" class="input__text col-12" required rows="5" onblur="inputBlur(this)" onfocus="inputFocus(this)"></textarea>
+                                                <label for="comments" class="input__label">Observações</label>
+                                                <textarea type="text" name="comments" id="comments"
+                                                    placeholder="Digite aqui os detalhes da sua carga, quanto mais detalhes, melhor. Fique a vontade!"
+                                                    class="input__text col-12" required rows="5"
+                                                    onblur="inputBlur(this)" onfocus="inputFocus(this)"
+                                                    required></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -159,54 +178,76 @@
                                         <div class="col-lg-5 col-md-4 col-12">
                                             <div class="input__field">
                                                 <label for="name" class="input__label">Seu Nome</label>
-                                            <input type="text" name="name"placeholder="Digite seu nome" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <input type="text" name="name" placeholder="Digite seu nome"
+                                                    class="input__text" required onblur="inputBlur(this)"
+                                                    onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                         <div class="col-lg-7 col-md-8 col-12">
                                             <div class="input__field">
                                                 <label for="email" class="input__label">Seu Email</label>
-                                            <input type="text" name="email" placeholder="Digite seu email" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <input type="email" name="email" placeholder="Digite seu email"
+                                                    class="input__text" required onblur="inputBlur(this)"
+                                                    onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                         <div class="col-lg-5 col-md-4 col-12">
                                             <div class="input__field">
-                                                <label for="phone" class="input__label">Telefone / Celular (Opcional)</label>
-                                            <input type="tel" name="phone" placeholder="Telefone/Celular" class="input__text" required onblur="inputBlur(this)" onfocus="inputFocus(this)">
+                                                <label for="phone" class="input__label">Telefone / Celular
+                                                    (Opcional)</label>
+                                                <input type="tel" name="phone" placeholder="Telefone/Celular"
+                                                    class="input__text" required onblur="inputBlur(this)"
+                                                    onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                     </div>
-                                </fieldset>    
+                                </fieldset>
 
                                 <div class="quotation__error">
                                     Você deve preencher todos os dados antes de ir para a proxima parte *
                                 </div>
 
                                 <div class="quotation__nextButton">
-                                    <button type="button" class="genericButton" onclick="nextStep()" id="quotationButton">
+                                    <button type="button" class="genericButton" onclick="nextStep()"
+                                        id="quotationButton">
                                         Continuar para Dados Pessoais
                                     </button>
                                 </div>
-                                
+
                             </form>
 
                             <div class="quotation__verifyData">
                                 Não se esqueça de verificar se os dados estão corretos *
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>   
-    </section>   
+        </div>
+    </section>
 
     <!-- Importar Jquery -->
     <script src="js/jquery-min.js"></script>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 95deb02cd9ea87ae5bdcefaa71a23f8b3aa09761
 
     <!-- Importar JS Forms -->
     <script src="js/forms.js"></script>
 
+    <!-- Importar autocomplete -->
+    <script src="js/autocomplete.min.js"></script>
+
+    <!-- Importar city -->
+    <script src="js/city.js"></script>
+
+    <script>
+        $('#origin').val(localStorage.getItem('origin'));
+        $('#destination').val(localStorage.getItem('destination'));
+    </script>
 </body>
 
 </html>
