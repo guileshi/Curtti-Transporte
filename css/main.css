@@ -313,11 +313,36 @@ body.cotacao{
     color: var(--accent-9);
 }
 
+/* whatsapp */
+.floating__whatsapp{
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    
+    color: #25D366;
+
+    padding: var(--px8) var(--px16);
+    border-radius: 100%;
+
+    background-color: var(--accent-0);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+    font-size: var(--px24);
+
+    animation: popUpAnim 0.2s forwards, reative 5s 1s infinite;
+    -webkit-animation: popUpAnim 0.2s forwards, reative 5s 1s infinite;
+    -moz-animation: popUpAnim 0.2s forwards, reative 5s 1s infinite;
+    -o-animation: popUpAnim 0.2s forwards, reative 5s 1s infinite;
+}
+
 /* animações */
 
 /* classes de animação */
 .slideDownAnim{
     animation: slideDown 1s 0.2s forwards;
+    -webkit-animation: slideDown 1s 0.2s forwards;
+    -moz-animation: slideDown 1s 0.2s forwards;
+    -o-animation: slideDown 1s 0.2s forwards;
 }
 
 
@@ -376,6 +401,78 @@ body.cotacao{
     100%{
         opacity: 1;
 
+        transform: scale(1);
+    }
+}
+
+@keyframes reative {
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes reative {
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes reative {
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@-o-keyframes reative {
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.1);
+    }
+    100%{
         transform: scale(1);
     }
 }

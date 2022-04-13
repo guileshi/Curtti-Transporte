@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- CSS Main -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.min.css">
 
     <!-- CSS Navbar -->
     <link rel="stylesheet" href="css/navbar.css">
@@ -129,23 +129,28 @@
                                 Alguma dúvida? Entre em contato conosco
                             </h2>
                         </div>
-                        <form class="col-12">
+                        <form class="col-12" action="sendMail.php" method="post">
+                            <input type="hidden" name="type" value="contato">
+
                             <div class="input__field">
                                 <label for="name" class="input__label">Seu Nome</label>
-                            <input type="text" name="name" id="name" placeholder="Digite o seu nome" class="input__text">
+                                <input type="text" name="name" id="name" placeholder="Digite o seu nome"
+                                    class="input__text">
                             </div>
 
                             <div class="input__field">
                                 <label for="email" class="input__label">Seu Email</label>
-                            <input type="text" name="email" id="email" placeholder="Digite o seu email" class="input__text">
+                                <input type="text" name="email" id="email" placeholder="Digite o seu email"
+                                    class="input__text">
                             </div>
 
-                            <label for="details" class="input__label">Digite aqui a sua dúvida/motivo do seu contato.</label>
+                            <label for="comments" class="input__label">Digite aqui a sua dúvida/motivo do seu
+                                contato.</label>
 
-                            <textarea id="details" name="details"
-                                    rows="4" class="input__text w-100">
-                            
-                            </textarea>
+                            <textarea id="comments" name="comments" rows="4" class="input__text w-100"
+                                placeholder="Digite aqui o motivo do seu contato com o Curtti, fique a vontade."></textarea>
+
+
 
                         </form>
 
@@ -166,11 +171,12 @@
                                 </h3>
                             </div>
                             <div class="col-12">
-                                <a href="#">
+                                <a target="_blank"
+                                    href="https://api.whatsapp.com/send?phone=11978833724&text=Ol%C3%A1%20Curtti,%20desejo%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20transporte%20de%20cargas%20ou%20mudan%C3%A7a.">
                                     <div class="contactUs__contact__field">
                                         <span class="contactUs__item">
                                             <i class="fa-brands fa-whatsapp contactUs__icon">
-        
+
                                             </i>
 
                                             (11) 9 7883-3724
@@ -179,13 +185,14 @@
                                 </a>
                             </div>
 
-    
+
                             <div class="col-12">
-                                <a href="mailto: comercial@curttitransportes.com.br">
-                                    <div class="contactUs__contact__field mb-0"> 
+                                <a href="mailto: comercial@curttitransportes.com.br"
+                                    title="comercial@curtitransportes.com.br">
+                                    <div class="contactUs__contact__field mb-0">
                                         <span class="contactUs__item">
                                             <i class="fa-solid fa-envelope contactUs__icon">
-        
+
                                             </i>
                                             comercial@curttitr...
                                     </div>
@@ -245,7 +252,8 @@
                             </li>
                             <li class="footer__list__item">
                                 <!-- api whatsweb -->
-                                <a href="#" class="footer__link">
+                                <a href="https://api.whatsapp.com/send?phone=11978833724&text=Ol%C3%A1%20Curtti,%20desejo%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20transporte%20de%20cargas%20ou%20mudan%C3%A7a."
+                                    class="footer__link">
                                     (11) 9 7883-3724
                                 </a>
                             </li>
