@@ -2,8 +2,8 @@ function getRotes(el) {
     var origin = el.querySelector(".origin").innerHTML
     var destination = el.querySelector(".destination").innerHTML
 
-    localStorage.setItem('Origem', origin)
-    localStorage.setItem('Destino', destination)
+    localStorage.setItem('origin', origin)
+    localStorage.setItem('destination', destination)
 }
 
 function setRotes() {
@@ -12,8 +12,8 @@ function setRotes() {
         var originInput = document.querySelector('#origin')
         var destinationInput = document.querySelector('#destination')
 
-        originInput.value = localStorage.getItem('Origem')
-        destinationInput.value = localStorage.getItem('Destino')
+        originInput.value = localStorage.getItem('origin')
+        destinationInput.value = localStorage.getItem('destination')
 
         localStorage.clear()
     }
