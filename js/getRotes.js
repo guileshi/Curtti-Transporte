@@ -1,7 +1,4 @@
 function getRotes(el) {
-
-    localStorage.clear()
-
     var origin = el.querySelector(".origin").innerHTML
     var destination = el.querySelector(".destination").innerHTML
 
