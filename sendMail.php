@@ -51,8 +51,12 @@ $mail->ClearAllRecipients();
 $mail->ClearAttachments();
 // Exibe uma mensagem de resultado
 if ($enviado) {
-    header('Location: sucesso.html');
-    echo true;
+    if ($cliente['type'] == 'contato') {
+        header('Location: index.html?sucesso=true');
+    } else {
+        header('Location: sucesso.html');
+        echo true;
+    }
 } else {
 
     echo 'false';
