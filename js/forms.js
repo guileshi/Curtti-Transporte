@@ -1,25 +1,25 @@
-function inputBlur(input){
-    if(!input.value){
+function inputBlur(input) {
+    if (!input.value) {
         input.classList.remove("blur")
         input.classList.add("blurError")
 
-    } else{
+    } else {
         input.classList.remove("blurError")
         input.classList.add("blur")
     }
 }
 
-function inputFocus(input){
+function inputFocus(input) {
     input.classList.remove("blur")
     input.classList.remove("blurError")
 }
 
-function nextStep(){
+function nextStep() {
 
-    if($(`.input__text`).val()){
+    if ($(`.input__text`).val()) {
         $('#quotationButton').html("Solicitar Cotação")
 
-        $('.quotation__error').css({"visibility": "hidden"})
+        $('.quotation__error').css({ "visibility": "hidden" })
 
         $('#mainVolume').addClass('hide')
         $('#volumeTitle').addClass('hide')
@@ -46,22 +46,36 @@ function nextStep(){
 
         $('#centerSVG').addClass('svgFill')
 
-        $('.quotation__back').on('click', function(event){
+        $('.quotation__back').on('click', function (event) {
             event.preventDefault()
         })
 
+        function inputHandler(masks, max, event) {
+            var c = event.target;
+            var v = c.value.replace(/\D/g, '');
+            var m = c.value.length > max ? 1 : 0;
+            VMasker(c).unMask();
+            VMasker(c).maskPattern(masks[m]);
+            c.value = VMasker.toPattern(v, masks[m]);
+        }
+
+        var telMask = ['(99) 9999-99999', '(99) 99999-9999'];
+        var tel = document.querySelector('#phone');
+        VMasker(tel).maskPattern(telMask[0]);
+        tel.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
+
         return
-    } else{
-        $('.quotation__error').css({"visibility": "visible"})
+    } else {
+        $('.quotation__error').css({ "visibility": "visible" })
 
         return
     }
 
 }
 
-function backStep(){
+function backStep() {
 
-    if($('#cargoData').hasClass('hide')){
+    if ($('#cargoData').hasClass('hide')) {
 
         $('#quotationButton').html("Continuar para Dados Pessoais")
 
@@ -75,26 +89,24 @@ function backStep(){
         $('#cargoData').addClass('unhide')
         $('#cargoDataTitle').removeClass('hide')
         $('#cargoData').removeClass('hide')
-        
+
         $('#pessoalDataTitle').addClass("hide")
         $('#pessoalData').addClass('hide')
         $('#pessoalDataTitle').removeClass("unhide")
         $('#pessoalData').removeClass('unhide')
-    
+
         $('#quotationButton').attr('type', 'button')
-    
+
         $('#divider1').removeClass("svgFill")
         $('#visualizerPersonalData').addClass('--desactived')
-    
+
         $('#visualizerCargoData').removeClass('--desactived')
-    
+
         $('#centerSVG').removeClass('svgFill')
-    
+
         $(this).attr("href", "cotacoes.html");
 
-        console.log("IF")
-    } else{
+    } else {
         $('.quotation__back').unbind();
-        console.log("ELSE")
     }
 }

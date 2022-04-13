@@ -178,7 +178,7 @@
                                         <div class="col-lg-5 col-md-4 col-12">
                                             <div class="input__field">
                                                 <label for="name" class="input__label">Seu Nome</label>
-                                                <input type="text" name="name" placeholder="Digite seu nome"
+                                                <input type="text" name="name" id="name" placeholder="Digite seu nome"
                                                     class="input__text" required onblur="inputBlur(this)"
                                                     onfocus="inputFocus(this)">
                                             </div>
@@ -186,16 +186,16 @@
                                         <div class="col-lg-7 col-md-8 col-12">
                                             <div class="input__field">
                                                 <label for="email" class="input__label">Seu Email</label>
-                                                <input type="email" name="email" placeholder="Digite seu email"
-                                                    class="input__text" required onblur="inputBlur(this)"
-                                                    onfocus="inputFocus(this)">
+                                                <input type="email" name="email" id="email"
+                                                    placeholder="Digite seu email" class="input__text" required
+                                                    onblur="inputBlur(this)" onfocus="inputFocus(this)">
                                             </div>
                                         </div>
                                         <div class="col-lg-5 col-md-4 col-12">
                                             <div class="input__field">
                                                 <label for="phone" class="input__label">Telefone / Celular
                                                     (Opcional)</label>
-                                                <input type="tel" name="phone" placeholder="Telefone/Celular"
+                                                <input type="tel" name="phone" id="phone" placeholder="Telefone/Celular"
                                                     class="input__text" required onblur="inputBlur(this)"
                                                     onfocus="inputFocus(this)">
                                             </div>
@@ -230,6 +230,9 @@
     <!-- Importar Jquery -->
     <script src="js/jquery-min.js"></script>
 
+    <!-- Importar Vanilla Masker -->
+    <script src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
+
     <!-- Importar JS Forms -->
     <script src="js/forms.js"></script>
 
@@ -241,6 +244,8 @@
 
     <!-- Importar city -->
     <script src="js/city.js"></script>
+
+
 
     <script>
         $('#origin').val(localStorage.getItem('origin'));

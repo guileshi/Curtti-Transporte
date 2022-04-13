@@ -1,5 +1,5 @@
 // Masking input element to money with options.
-VMasker(document.querySelector("#value_cost")).maskMoney({
+VMasker(document.querySelector("#note_cost")).maskMoney({
   // Decimal precision -> "90"
   precision: 2,
   // Decimal separator -> ",90"
@@ -22,8 +22,3 @@ function inputHandler(masks, max, event) {
 	VMasker(c).maskPattern(masks[m]);
 	c.value = VMasker.toPattern(v, masks[m]);
 }
-
-var telMask = ['(99) 9999-99999', '(99) 99999-9999'];
-var tel = document.querySelector('#phone');
-VMasker(tel).maskPattern(telMask[0]);
-tel.addEventListener('input', inputHandler.bind(undefined, telMask, 14), false);
