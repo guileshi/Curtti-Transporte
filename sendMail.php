@@ -1,7 +1,5 @@
 <?php
-echo 'aaaa';
 $cliente = $_POST;
-
 
 //var_dump($cliente);
 //echo corpoEmail($cliente);
@@ -17,7 +15,7 @@ $mail->IsSMTP(); // Define que a mensagem será SMTP
 $mail->Host = "mail.curttitransportes.com.br"; // Endereço do servidor SMTP
 $mail->SMTPAuth = true; // Usa autenticação SMTP? (opcional)
 $mail->Username = 'comercial@curttitransportes.com.br'; // Usuário do servidor SMTP
-$mail->Password = ']s@c0]&1l.oC'; // Senha do servidor SMTP
+$mail->Password = 'm_6~qgGJZX=Y'; // Senha do servidor SMTP
 $mail->Port = 587;
 
 // Define o remetente
@@ -53,17 +51,17 @@ $mail->ClearAllRecipients();
 $mail->ClearAttachments();
 // Exibe uma mensagem de resultado
 if ($enviado) {
-  header('Location: sucesso.html');
-  echo true;
+    header('Location: sucesso.html');
+    echo true;
 } else {
 
-  echo 'false';
+    echo 'false';
 }
 
 function corpoEmail($cliente)
 {
-  if ($cliente['type'] == 'mudanca') {
-    return '
+    if ($cliente['type'] == 'mudanca') {
+        return '
     <!DOCTYPE html>
     <html>
         <head>
@@ -96,8 +94,8 @@ function corpoEmail($cliente)
         </body>
     </html>
     ';
-  } else {
-    return '
+    } else if ($cliente['type'] == 'normal') {
+        return '
     <!DOCTYPE html>
     <html>
         <head>
@@ -131,5 +129,36 @@ function corpoEmail($cliente)
         </body>
     </html>
     ';
-  }
+    } else if ($cliente['type'] == 'contato') {
+        return '
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title> Email de contato </title>
+            </head>
+            <body style="background-color: #e8e8e8;">
+                <table align=center style="margin: 0 auto; text-align: center; width: 600px;">
+                    <tr>
+                        <td style="background-color: #4ca9e2; color: #fff; padding: 20px;">
+                            <h1 style="margin: 0;">Cotação - Site Curtti Transportes</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #fff; padding: 20px; text-align: justify;">
+                            <p style="font-size: 20px;"><b style="font-size: 20px; color: #4ca9e2;">Nome:</b> ' . $cliente['name'] . '</p>
+                            <p style="font-size: 20px;"><b style="font-size: 20px; color: #4ca9e2;">email:</b> ' . $cliente['email'] . '</p>
+                            <p style="font-size: 20px;"><b style="font-size: 20px; color: #4ca9e2;">Corpo:</b> ' . nl2br($cliente['comments']) . '</p>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #464646; color: #fff; padding: 10px;">
+                        Copyright © 2022 | Curtti Transportes
+                        </td>
+                    </tr>
+                </table>
+            </body>
+        </html>
+        ';
+    }
 }
