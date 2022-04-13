@@ -335,6 +335,37 @@ body.cotacao{
     -o-animation: popUpAnim 0.2s forwards, reative 5s 1s infinite;
 }
 
+
+/* sucess card */
+.success__card{
+    padding: var(--px16);
+    background-color: var(--accent-0);
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.1);
+
+    border-radius: 12px;
+
+    position: fixed;
+
+    display: none;
+
+    left: 8px;
+    bottom: 8px;
+
+    opacity: 0;
+    transform: translateX(-100px) scale(0);
+
+    animation: cameShowGo 5s forwards;
+}
+
+.success__card i{
+    color: #25D366;
+}
+
+.success__card span{
+    font-size: var(--px16);
+    margin-left: var(--px8);
+}
+
 /* animações */
 
 /* classes de animação */
@@ -474,6 +505,63 @@ body.cotacao{
     }
     100%{
         transform: scale(1);
+    }
+}
+
+@keyframes cameShowGo{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    10%,90%{
+        opacity: 1;
+
+        transform: scale(1);
+    }
+    100%{
+        transform: translateY(100px);
+    }
+}
+
+@-webkit-keyframes cameShowGo{
+    0%{
+        opacity: 0;
+    }
+    10%,90%{
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+    100%{
+        transform: translateY(100px);
+    }
+}
+
+@-moz-keyframes cameShowGo{
+    0%{
+        opacity: 0;
+    }
+    10%,90%{
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+    100%{
+        transform: translateY(100px);
+    }
+}
+
+@-o-keyframes cameShowGo{
+    0%{
+        opacity: 0;
+    }
+    10%,90%{
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+    100%{
+        transform: translateY(100px);
     }
 }
 
