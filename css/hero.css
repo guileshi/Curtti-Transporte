@@ -23,7 +23,7 @@
 
     opacity: 0;
 
-    animation: slideDown 1s 0.1s forwards;
+    animation: slideDown 0.5s 0.1s forwards;
 
 }
 
@@ -34,7 +34,7 @@
 
     opacity: 0;
 
-    animation: slideDown 1s forwards;
+    animation: slideDown 0.5s forwards;
 }
 
 .hero__description{
@@ -45,28 +45,28 @@
 
     opacity: 0;
 
-    animation: slideDown 1s 0.4s forwards;
+    animation: slideDown 0.5s 0.4s forwards;
 }
 
 #hero .input__field{
 
     opacity: 0;
 
-    animation: slideDown 1s .4s forwards;
+    animation: slideDown 0.5s .4s forwards;
 }
 
 #hero .genericButton{
 
     opacity: 0;
 
-    animation: opacity 1s .8s forwards;
+    animation: opacity 0.5s .4s forwards;
 
 }
 
 #hero .svgImg{
     opacity: 0;
 
-    animation: slideDown 1.5s 0.1s forwards;
+    animation: slideDown 0.5s 0.1s forwards;
 }
 
 .bottomArrow{
